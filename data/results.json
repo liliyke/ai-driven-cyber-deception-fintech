@@ -1,0 +1,160 @@
+{
+  "seed": 7,
+  "n_trials": 10,
+  "metrics": {
+    "ADDF": {
+      "attacker_trials": 10,
+      "legit_trials": 10,
+      "detection_rate": 1.0,
+      "mean_time_to_detect_s": 60.0,
+      "mean_dwell_s": 102.0,
+      "exfiltration_prevented_rate": 1.0,
+      "false_positive_rate": 0.0,
+      "overhead_pct": 9.6
+    },
+    "Baseline": {
+      "attacker_trials": 10,
+      "legit_trials": 10,
+      "detection_rate": 1.0,
+      "mean_time_to_detect_s": 180.0,
+      "mean_dwell_s": 0.0,
+      "exfiltration_prevented_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "overhead_pct": 0.0
+    }
+  },
+  "ioc_report": {
+    "total_events": 84,
+    "attacker_events": 84,
+    "decoy_interactions": 34,
+    "indicators": [
+      {
+        "kind": "ip",
+        "value": "203.0.113.61",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "technique",
+        "value": "T1110.004",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING"
+        }
+      },
+      {
+        "kind": "technique",
+        "value": "T1021",
+        "first_seen": 4,
+        "technique": "T1021",
+        "context": {
+          "phase": "LATERAL_MOVEMENT"
+        }
+      },
+      {
+        "kind": "technique",
+        "value": "T1041",
+        "first_seen": 7,
+        "technique": "T1041",
+        "context": {
+          "phase": "EXFILTRATION"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.223",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.229",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.203",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.136",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.179",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.220",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.236",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.130",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      },
+      {
+        "kind": "ip",
+        "value": "203.0.113.55",
+        "first_seen": 1,
+        "technique": "T1110.004",
+        "context": {
+          "phase": "CREDENTIAL_STUFFING",
+          "endpoint": "/login"
+        }
+      }
+    ]
+  }
+}
