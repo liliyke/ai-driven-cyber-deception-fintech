@@ -38,20 +38,16 @@ defense, FinTech.
 
 ## Architecture
 
-The closed loop, mapped to the modules in [`src/addf/`](src/addf):
+The closed loop, mapped to the modules in [`src/addf/`](src/addf). `orchestrator.py` drives the
+loop and `env.py` defines the agent's MDP:
 
-```
-            ┌──────────────┐   events    ┌───────────────┐  threat score  ┌─────────────┐
-            │   FinBank     │ ──────────▶ │   Telemetry   │ ─────────────▶ │   Threat    │
-            │  test-bed     │             │  + IOC export │                │  profiler   │
-            │ (finbank.py)  │ ◀───────┐   │(telemetry.py) │                │(profiler.py)│
-            └──────────────┘  resolve │   └───────────────┘                └─────────────┘
-                   ▲          decoy   │                                           │ state
-       deploy decoy│                  │                                           ▼
-            ┌──────────────┐          │                                   ┌─────────────┐
-            │   Decoys      │ ◀────────┴────────── action ─────────────────│  PPO agent  │
-            │ (decoys.py)   │     (orchestrator.py / env.py)               │  (ppo.py)   │
-            └──────────────┘                                               └─────────────┘
+```mermaid
+flowchart LR
+    FB["FinBank test-bed<br/>(finbank.py)"] -- events --> TEL["Telemetry + IOC export<br/>(telemetry.py)"]
+    TEL -- "threat score" --> PROF["Threat profiler<br/>(profiler.py)"]
+    PROF -- state --> AGENT["PPO agent<br/>(ppo.py)"]
+    AGENT -- action --> DEC["Decoys<br/>(decoys.py)"]
+    DEC -- "deploy and resolve outcome" --> FB
 ```
 
 - **Threat profiler** (`profiler.py`) — default is an Echo-State reservoir (fixed random
