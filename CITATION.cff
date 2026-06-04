@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper below."
+title: "AI Driven Cyber Deception in FinTech: An Adaptive Defense Strategy"
+abstract: >-
+  An Adaptive Deception Defense Framework (ADDF) that orchestrates AI-driven
+  honeypots, honeytokens and decoy micro-services within live FinTech workflows,
+  using a recurrent-neural threat profiler and a Proximal-Policy-Optimization
+  agent to misdirect attackers while harvesting threat intelligence.
+type: software
+authors:
+  - family-names: Ojeh
+    given-names: Isaac
+  - family-names: Palmer
+    given-names: Xavier
+    affiliation: "BiosView Labs"
+  - family-names: Potter
+    given-names: Lucas
+    affiliation: "BiosView Labs"
+keywords:
+  - AI-driven deception
+  - ADDF
+  - honeypots
+  - machine learning
+  - reinforcement learning
+  - FinTech security
+license: CC-BY-4.0
+date-released: "2025-12-04"
+doi: 10.34190/icair.5.1.4365
+url: "https://doi.org/10.34190/icair.5.1.4365"
+preferred-citation:
+  type: conference-paper
+  title: "AI Driven Cyber Deception in FinTech: An Adaptive Defense Strategy"
+  authors:
+    - family-names: Ojeh
+      given-names: Isaac
+    - family-names: Palmer
+      given-names: Xavier
+      affiliation: "BiosView Labs"
+    - family-names: Potter
+      given-names: Lucas
+      affiliation: "BiosView Labs"
+  collection-title: "Proceedings of the 6th International Conference on AI Research (ICAIR 2025)"
+  publisher:
+    name: "Academic Conferences International"
+  volume: 6
+  issue: 1
+  year: 2025
+  month: 12
+  doi: 10.34190/icair.5.1.4365
+  url: "https://doi.org/10.34190/icair.5.1.4365"

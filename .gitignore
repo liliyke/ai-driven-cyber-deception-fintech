@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML / experiment artifacts
+*.ckpt
+*.pt
+*.pth
+runs/
+wandb/
+mlruns/
+
+# data dumps (keep only curated, synthetic artifacts under data/)
+*.sqlite
+*.db
+*.log
+
+# env / secrets
+.env
+.env.local
+
+# editor / os
+.DS_Store
+.idea/
+.vscode/
