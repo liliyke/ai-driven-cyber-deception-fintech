@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "addf"
+version = "0.1.0"
+description = "Adaptive Deception Defense Framework (ADDF) — reference implementation of the ICAIR 2025 paper"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-4.0" }
+authors = [
+  { name = "Isaac Ojeh" },
+  { name = "Xavier Palmer" },
+  { name = "Lucas Potter" },
+]
+keywords = ["cyber-deception", "fintech", "honeypots", "reinforcement-learning", "threat-intelligence"]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+# The default code path runs on numpy alone. These upgrade the profiler/agent/testbed
+# to the heavyweight implementations described in the paper.
+torch = ["torch>=2.0"]          # GRU threat profiler
+rl = ["stable-baselines3>=2.0", "gymnasium>=0.29"]  # PPO agent
+serve = ["flask>=3.0"]          # run FinBank as a real HTTP service
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+addf-simulate = "addf.simulate:main"
+
+[project.urls]
+Paper = "https://doi.org/10.34190/icair.5.1.4365"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

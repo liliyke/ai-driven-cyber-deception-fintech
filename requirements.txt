@@ -1,0 +1,8 @@
+# Core — the default ADDF simulation runs on these alone.
+numpy>=1.24
+
+# Optional upgrades (install as needed; see pyproject.toml extras):
+#   pip install -e .[torch]   # PyTorch GRU threat profiler
+#   pip install -e .[rl]      # stable-baselines3 PPO agent + gymnasium
+#   pip install -e .[serve]   # Flask HTTP wrapper for the FinBank testbed
+#   pip install -e .[dev]     # pytest
